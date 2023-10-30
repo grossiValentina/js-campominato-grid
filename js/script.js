@@ -4,14 +4,11 @@ const gridElem = document.querySelector(".grid");
 // ciclo for 
 
  for (let i = 1; i < 100; i++) {
-        console.log(i)
         const cell = generateGridCell(i + 1)
         cell.addEventListener("click", eventClick)
         gridElem.appendChild(cell)
        
 }
-
-
 
 // FUNZIONI 
 
@@ -26,7 +23,10 @@ function generateGridCell(cellNumber) {
 
 function eventClick() {
     const clickNumber = parseInt(this.textContent)
-        this.classList.add("pink")
+    console.log(clickNumber)
+    this.classList.add("pink")
+    
+
         
     
 }
